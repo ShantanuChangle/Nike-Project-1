@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: gilroy;
+    box-sizing: border-box;
+}
+
+#main{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#left{
+    position: relative;
+    height: 100%;
+    width: 45%;
+    animation-name: opaque;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opaque {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#left h6{
+    position: absolute;
+    color: white;
+    font-weight: 250;
+    font-size: 60px;
+    right: 12%;
+    bottom: 11%;
+}
+
+#leftbtm{
+    position: absolute;
+    left: 6%;
+    bottom: 15%;
+    height: 20%;
+    width: 40%;
+    animation-name: right;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes right {
+    0%{
+        left: -50%;
+        opacity: 0;
+    }
+    100%{
+        left: 6%;
+        opacity: 1;
+    }
+}
+
+#leftbtm h4{
+    position: absolute;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    padding: 1% 5%;
+}
+
+#leftbtm span{
+    font-weight: 300;
+}
+
+#leftbtm h2{
+    font-weight: 400;
+    position: absolute;
+    color: white;
+    padding: 35% 5%;
+}
+
+#leftbtm button{
+    position: absolute;
+    left: 3%;
+    top: 90%;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #571F46;
+    color: white;
+    border-radius: 15px;
+    border-color: none;
+    box-shadow: 1px 1px 5px 5px rgb(16, 14, 14);
+    scale: 1;
+    transition: 1s;
+}
+
+#leftbtm button:hover{
+    background-color: #010413;
+    scale: 1.2;
+}
+
+#left img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#logo img{
+    position: absolute;
+    padding: 4% 9%;
+    height: 90px;
+    width: 80px;
+}
+
+#right{
+    position: relative;
+    height: 100%;
+    width: 55%;
+    background-color: whitesmoke;
+}
+
+#nav{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    animation-name: downwards;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes downwards {
+    0%{
+        top: -50%;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+#navleft {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+
+#navleft i{
+    position: absolute;
+    left: 2%;
+    top: 30%;
+}
+
+#navleft h4{
+    position:absolute;
+    left: 10%;
+    top: 25%;
+    font-size: 30px;
+}
+
+#navleft span{
+    font-weight: 300;
+}
+
+#navright {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    gap: 20px;
+    left: 80%;
+    top: 30%;
+}
+
+#navright a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+#cards{
+    position: relative;
+    top:2%;
+    display: flex;
+    overflow: auto;
+    margin-left: 65px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 65px;
+    padding-left: 20px;
+    gap: 30px;
+    height: 60%;
+    animation-name: left;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#cards::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    margin-top: 50px;
+    flex-shrink: 0;
+    /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s; */
+    overflow: hidden;
+    position: relative;
+    width: 280px;
+    height: 450px;
+    background-color: #fff;
+    box-shadow: 5px 0px 10px 1px rgba(120, 120, 120, 0.907);
+    border-radius: 15px;
+    scale: 1;
+    transition: 1s;
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+.card img{
+    position: absolute;
+    left: -20%;
+    top: 3%;
+    /* height: 50%; */
+    width: 100%;
+    filter: drop-shadow(0px 10px 10px 10px rgb(215,215,215));
+}
+
+.card h2{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.card h3{
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card button{
+    position: absolute;
+    left: 3%;
+    top: 75%;
+    font-family: gilroy;
+    font-size: 15px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border-color: none;
+    scale: 1;
+    transition: 1s;
+}
+
+.card button:hover{
+    scale: 1.1;
+}
+
+.card #btn{
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 390px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+#btn #circle{
+    color: #fff;
+    background-color: #C13F47;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(28,255,183,0.31);
+}
+
+.card #pegasus{
+    position: absolute;
+    top: 40px;
+}
+
+.card #airmax{
+    position: absolute;
+    top: 40px;
+}
+
+#rightbtm{
+    display: flex;
+    position: absolute;
+    bottom:7%;
+    height:15%;
+    width: 100%;
+    /* background-color: #fff; */
+    gap: 30px;
+    animation-name: left;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes left {
+    0%{
+        right: -100%;
+        opacity: 0;
+    }
+
+    100%{
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+#rightbtm a{
+    text-decoration: none;
+    padding: 6% 9%;
+    font-family: gilroy;
+    color: black;
+    font-size: 25px;
+    font-weight: 450;
+    opacity: .9;
+}
+
+#rightbtm span{
+    font-weight: 800;
+}
+
+#rightHor{
+    display: flex;
+    position: absolute;
+    left: -15%;
+    top: 33.5%;
+    height: 5%;
+    width: 40%;
+    text-align: center;
+    justify-content:center;
+    gap:65px;
+    transform: rotate(-90deg);
+    animation-name: upwards;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes upwards {
+    0%{
+        top: 100%;
+        opacity: 0;
+    }
+    100%{
+        top: 33.5%;
+        opacity: 1;
+    }
+}
+
+#rightHor a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 450;
+    font-size: 16px;
+    color: black;
+    opacity: .9;
+}
+
+#rightHor span{
+    font-weight: 800;
+}
